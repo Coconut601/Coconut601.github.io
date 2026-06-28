@@ -1,59 +1,290 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista di Shop Online per lo Skating</title>
-    <link rel="stylesheet" href="style.css">
-    <bgimage></bgimage>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coconut Development — Privacy e Termini di Servizio</title>
+<style>
+  :root{
+    --bg: #FBF8F3;
+    --panel: #FFFFFF;
+    --text: #2B2118;
+    --muted: #6B5E50;
+    --accent: #8B5E34;
+    --accent-soft: #F1E4D3;
+    --line: #E7DDCB;
+    --focus: #5B7553;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .top-nav{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(251,248,243,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-inner{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .brand{
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    font-size: 1rem;
+  }
+
+  .nav-inner nav{
+    display: flex;
+    gap: 20px;
+    font-size: 0.92rem;
+  }
+
+  .nav-inner nav a{
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .nav-inner nav a:hover{ color: var(--accent); }
+
+  main{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 24px;
+  }
+
+  .intro h1{
+    font-size: 1.9rem;
+    margin: 0 0 12px;
+  }
+
+  .intro p{
+    color: var(--muted);
+    max-width: 58ch;
+  }
+
+  .updated{
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    background: var(--accent-soft);
+    border-radius: 999px;
+    color: var(--accent);
+  }
+
+  section.doc{
+    margin-top: 56px;
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+
+  section.doc h2{
+    font-size: 1.5rem;
+    margin: 24px 0 8px;
+  }
+
+  section.doc h3{
+    font-size: 1.1rem;
+    margin: 28px 0 6px;
+    color: var(--accent);
+  }
+
+  section.doc p, section.doc li{
+    color: var(--text);
+  }
+
+  section.doc ul{
+    margin: 8px 0 16px;
+    padding-left: 22px;
+  }
+
+  section.doc li{
+    margin-bottom: 6px;
+  }
+
+  .note{
+    margin-top: 18px;
+    padding: 14px 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+
+  footer{
+    max-width: 760px;
+    margin: 64px auto 0;
+    padding: 24px 24px 48px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+
+  .back-top{ font-weight: 600; }
+
+  @media (max-width: 480px){
+    main{ padding: 32px 18px 18px; }
+    .nav-inner{ padding: 12px 18px; }
+    .intro h1{ font-size: 1.5rem; }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="pagina_chi_siamo.html">Chi Siamo</a></li>
-              <li><a href="pagina_contatti.html">Contatti</a></li>
-              <li><a href="pagina_servizi.html">Servizi</a></li>
-              <li><a href="changelogs.html">Changelogs</a></li>
-            </ul>
-          </nav>
-      </header>
-    <div class="contenuto_iniziale_principale">
-        <h1>Lista di Shop Online Per lo Skating</h1>
-        <h2>Descrizione del sito</h2>
-        <p>Questa è una lista dei migliori siti per acquistare articoli per lo skating, questa lista è stata creata personalmente da me secondo la mia esperienza con questi siti (non sono stato pagato, lo giuro)</p>
+
+<header class="top-nav">
+  <div class="nav-inner">
+    <span class="brand">🥥 Coconut Development</span>
+    <nav>
+      <a href="#privacy">Informativa Privacy</a>
+      <a href="#termini">Termini di Servizio</a>
+      <a href="https://github.com/ValeTheCyborg" target="_blank" rel="noopener noreferrer">Il nostro GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="intro">
+    <h1>Privacy e Termini di Servizio</h1>
+    <p>Questa pagina raccoglie l'Informativa sulla Privacy e i Termini di Servizio applicabili a tutti i bot Discord sviluppati e gestiti da Coconut Development.</p>
+    <span class="updated">Ultimo aggiornamento: 28 giugno 2026</span>
+  </section>
+
+  <section class="doc" id="privacy">
+    <h2>Informativa sulla Privacy</h2>
+
+    <h3>1. Titolare del trattamento</h3>
+    <p>Il Titolare del trattamento dei dati è Coconut Development ("noi", "il Titolare"), responsabile dello sviluppo e della gestione di tutti i bot Discord pubblicati sotto questo marchio. Per qualsiasi richiesta relativa al trattamento dei tuoi dati personali puoi scriverci all'indirizzo indicato nei contatti in fondo alla pagina.</p>
+
+    <h3>2. Quali dati raccogliamo</h3>
+    <p>I nostri bot possono raccogliere ed elaborare le seguenti informazioni nel corso del normale funzionamento:</p>
+    <ul>
+      <li>Identificativo utente Discord (User ID)</li>
+      <li>Identificativo del server (Guild ID) e dei canali in cui il bot è installato</li>
+      <li>Contenuto dei comandi inviati al bot, limitato a quanto necessario per eseguire la funzione richiesta</li>
+      <li>Impostazioni di configurazione definite dagli amministratori del server (es. prefissi, ruoli, canali designati)</li>
+      <li>Log tecnici (timestamp, errori, utilizzo dei comandi) per finalità di manutenzione e sicurezza</li>
+    </ul>
+    <p>Non raccogliamo intenzionalmente il contenuto dei messaggi non indirizzati al bot, né categorie particolari di dati ai sensi dell'art. 9 del GDPR.</p>
+
+    <h3>3. Finalità del trattamento</h3>
+    <ul>
+      <li>Fornire ed eseguire le funzionalità dei bot</li>
+      <li>Applicare le impostazioni richieste dagli amministratori dei server</li>
+      <li>Garantire sicurezza, prevenzione di abusi e rispetto dei Termini di Servizio</li>
+      <li>Risolvere problemi tecnici e migliorare il servizio</li>
+    </ul>
+
+    <h3>4. Base giuridica</h3>
+    <p>Il trattamento si fonda sull'esecuzione di un contratto (l'utilizzo del bot secondo questi Termini) e sul legittimo interesse a garantire sicurezza e corretto funzionamento del servizio, ai sensi dell'art. 6 del Regolamento (UE) 2016/679 (GDPR).</p>
+
+    <h3>5. Conservazione dei dati</h3>
+    <p>Conserviamo i dati per il tempo strettamente necessario alle finalità descritte. I log tecnici vengono conservati per un periodo limitato e successivamente eliminati o anonimizzati, salvo diversi obblighi di legge.</p>
+
+    <h3>6. Condivisione con terzi</h3>
+    <p>I dati raccolti dai bot sono ospitati su infrastrutture di hosting selezionate per garantire adeguati standard di sicurezza. Discord Inc. elabora autonomamente i dati relativi al tuo account secondo la propria informativa, che ti invitiamo a consultare su discord.com/privacy. Non vendiamo né condividiamo i tuoi dati con terzi per finalità commerciali.</p>
+
+    <h3>7. I tuoi diritti</h3>
+    <p>In qualità di interessato hai diritto, in qualsiasi momento, di richiedere l'accesso, la rettifica, la cancellazione o la limitazione del trattamento dei tuoi dati, di opporti al trattamento e di presentare reclamo al Garante per la Protezione dei Dati Personali. Per esercitare questi diritti scrivici all'indirizzo riportato in fondo alla pagina.</p>
+
+    <h3>8. Sicurezza</h3>
+    <p>Adottiamo misure tecniche e organizzative adeguate per proteggere i dati da accessi non autorizzati, perdita o divulgazione.</p>
+
+    <h3>9. Minori</h3>
+    <p>I nostri bot sono destinati a un pubblico conforme ai requisiti minimi di età previsti dai Termini di Servizio di Discord (attualmente 13 anni). Non raccogliamo consapevolmente dati di minori al di sotto di tale soglia.</p>
+
+    <h3>10. Modifiche alla presente informativa</h3>
+    <p>Possiamo aggiornare periodicamente questa informativa. Le modifiche saranno pubblicate su questa pagina con indicazione della data di ultimo aggiornamento.</p>
+  </section>
+
+  <section class="doc" id="termini">
+    <h2>Termini di Servizio</h2>
+
+    <h3>1. Accettazione dei termini</h3>
+    <p>Utilizzando uno qualsiasi dei bot Discord sviluppati da Coconut Development accetti integralmente i presenti Termini di Servizio. Se non li accetti, devi interrompere l'utilizzo del bot e rimuoverlo dal tuo server.</p>
+
+    <h3>2. Descrizione del servizio</h3>
+    <p>I bot Coconut Development forniscono funzionalità automatizzate all'interno dei server Discord in cui vengono installati (es. moderazione, utility, intrattenimento, gestione community), nei limiti descritti nella documentazione di ciascun bot.</p>
+
+    <h3>3. Uso consentito</h3>
+    <p>Puoi utilizzare i nostri bot per finalità lecite e conformi ai Termini di Servizio e alle Linee Guida della Community di Discord.</p>
+
+    <h3>4. Uso vietato</h3>
+    <ul>
+      <li>Utilizzare il bot per finalità illegali, fraudolente o dannose</li>
+      <li>Tentare di sfruttare, decompilare o manomettere il codice del bot</li>
+      <li>Sovraccaricare intenzionalmente i sistemi del bot (es. spam di comandi, abusi o attacchi)</li>
+      <li>Utilizzare il bot per raccogliere dati di altri utenti senza consenso</li>
+    </ul>
+
+    <h3>5. Responsabilità dell'utente e degli amministratori</h3>
+    <p>Gli amministratori dei server sono responsabili della corretta configurazione del bot e dei permessi concessi. Coconut Development non è responsabile per un uso improprio del bot da parte di terzi all'interno del server.</p>
+
+    <h3>6. Disponibilità del servizio</h3>
+    <p>Il servizio è fornito "as is" e "as available". Non garantiamo continuità, assenza di interruzioni o di errori. Ci riserviamo il diritto di sospendere temporaneamente o permanentemente il servizio, in tutto o in parte, senza preavviso.</p>
+
+    <h3>7. Limitazione di responsabilità</h3>
+    <p>Nei limiti consentiti dalla legge, Coconut Development non è responsabile per danni diretti, indiretti, incidentali o consequenziali derivanti dall'utilizzo o dall'impossibilità di utilizzare i bot.</p>
+
+    <h3>8. Proprietà intellettuale</h3>
+    <p>Il codice, i nomi, i loghi e i contenuti originali dei bot sono di proprietà di Coconut Development e non possono essere riprodotti, distribuiti o modificati senza autorizzazione scritta.</p>
+
+    <h3>9. Sospensione e cessazione dell'accesso</h3>
+    <p>Ci riserviamo il diritto di sospendere o bloccare l'accesso al bot per singoli utenti o server, in caso di violazione dei presenti Termini, senza necessità di preavviso.</p>
+
+    <h3>10. Modifiche al servizio e ai termini</h3>
+    <p>Possiamo modificare i bot e i presenti Termini in qualsiasi momento. L'uso continuato del servizio dopo una modifica costituisce accettazione dei nuovi Termini.</p>
+
+    <h3>11. Legge applicabile</h3>
+    <p>I presenti Termini sono regolati dalla legge italiana, salvo diverse disposizioni imperative applicabili.</p>
+
+    <div class="note">
+      Questo testo è un modello generico pensato per coprire i casi più comuni dei bot Discord. Personalizza l'indirizzo email di contatto qui sotto e, se uno dei tuoi bot raccoglie dati particolari (es. dati vocali, integrazioni esterne), aggiungi una sezione dedicata.
     </div>
-    <div class="contenuto_centrale_principale">
-        <h1>Lista dei siti</h1>
-        <button onclick="window.location.href='https://www.intrappolashop.it/'">Intrappola Shop</button>
-        <button onclick="window.location.href='http://www.rollskater.com'">Roll Skater</button>
-        <button onclick="window.location.href='http://www.iceskater.it'">Ice Skater</button>
-        <button onclick="window.location.href='http://www.glisshop.it'">GlisShop</button>
-        <button onclick="window.location.href='http://www.theplayoffs.com'">The Playoffs</button>
-        <button onclick="window.location.href='http://www.decathlon.it'">Decathlon Italia</button>
-        <button onclick="window.location.href='http://www.skatepro.it'">SkatePro Italia</button>
-        <button onclick="window.location.href='http://www.planet-sports.com'">Planet Sports</button>
-        <button onclick="window.location.href='http://www.tuttoskate.com'">TuttoSkate</button>
-        <button onclick="window.location.href='http://www.skatewarehouse.com'">Skate Warehouse</button>
-    </div>
-    <div class="contenuto_finale_principale">
-        <h1>Considerazioni Qualita Prezzo</h1>
-        <p><a href="https://www.intrappolashop.it/">Intrappola Shop</a>| Qualita= 10/10 Prezzo= 10/10 Specializzato in prodotti di qualità, spesso con marchi di fascia medio-alta.</p>
-        <p><a href="www.rollskater.com">Roll Skater</a>| Qualita= 9/10 Prezzo= 7/10 Buon assortimento di prodotti, ma la qualità può variare.</p>
-        <p><a href="www.iceskater.it">Ice Skater</a>| Qualita= 7/10 Prezzo= 6/10 Focalizzati su pattini da ghiaccio e roller, offrono una buona qualità ma non eccezionale.</p>
-        <p><a href="www.glisshop.it">GlisShop</a>| Qualita= 8/10 Prezzo= 7/10 Ottima qualità, soprattutto per articoli da skate e longboard.</p>
-        <p><a href="www.theplayoffs.com">The Playoffs</a>| Qualita= 9/10 Prezzo= 6/10 Specializzati in articoli di alta qualità, con ottimi marchi.</p>
-        <p><a href="www.decathlon.it">Decathlon Italia</a>| Qualita= 6/10 Prezzo= 9/10 Ottima selezione di prodotti da skate e pattinaggio, con marchi conosciuti.</p>
-        <p><a href="www.planet-sports.com">Planet Sports</a>| Qualita= 8/10 Prezzo= 7/10 Buona qualità, con un’ampia gamma di prodotti da skate e snowboard.</p>
-        <p><a href="www.tuttoskate.com">TuttoSkate</a>| Qualita= 7/10 Prezzo= 7/10 Buoni prodotti, ma l’offerta non è vastissima.</p>
-        <p><a href="www.skatewarehouse.com">Skate Warehouse</a> Qualita= 9/10 Prezzo= 6/10 Alta qualità, con un’ottima selezione di articoli e marchi.</p>
-    </div>
-</body>
+  </section>
+</main>
+
 <footer>
-    <div class="footer">
-        <p>Copyright © 2025/2026 Valentino Schiraldi. Tutti i diritti riservati.</p>
-        <p>Tutti i contenuti di questo sito sono protetti da copyright. È vietata qualsiasi riproduzione senza consenso.</p>
-    </div>
+  <span>© 2026 Coconut Development — Contatti: <a href="mailto:privacy@coconutdevelopment.it">privacy@coconutdevelopment.it</a></span>
+  <a class="back-top" href="#top">Torna su ↑</a>
 </footer>
+
+</body>
 </html>
