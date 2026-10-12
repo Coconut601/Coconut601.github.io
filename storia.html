@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Francesco - La Storia</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA DI NAVIGAZIONE -->
+    <header>
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="storia.html" class="nav-link active">LA STORIA</a></li>
+                <li><a href="tradizione.html" class="nav-link">LA TRADIZIONE</a></li>
+                <li><a href="galleria.html" class="nav-link">GALLERIA</a></li>
+                <li><a href="fonti.html" class="nav-link">FONTI</a></li>
+                <li><a href="chi-sono.html" class="nav-link">CHI SONO</a></li>
+            </ul>
+
+            <div class="nav-utils">
+                <div class="lang-selector">
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="6.66" height="14" fill="#009246"/>
+                        <rect x="6.66" width="6.68" height="14" fill="#FFFFFF"/>
+                        <rect x="13.34" width="6.66" height="14" fill="#CE2B37"/>
+                    </svg>
+                    <span>IT</span>
+                    <span>▼</span>
+                </div>
+                <div class="separator"></div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGINA 2: LA STORIA -->
+        <section class="page-section active">
+            <div class="container">
+                <h2 class="fade-in" style="text-align: center; margin-bottom: 20px;">La storia di San Francesco</h2>
+                <p class="fade-in" style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">Francesco nacque ad Assisi intorno al 1181-1182, figlio di Pietro di Bernardone, ricco mercante di stoffe. La sua vita cambiò radicalmente e ancora oggi continua a parlare a credenti e non credenti.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item fade-in">
+                        <h3>1. Giovinezza ad Assisi</h3>
+                        <p>Cresce in una famiglia agiata e sogna la gloria cavalleresca. Ama le feste, la compagnia e le canzoni.</p>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <h3>2. La prigionia e la malattia</h3>
+                        <p>Nel 1202, dopo lo scontro tra Assisi e Perugia, viene fatto prigioniero. Il ritorno a casa e la malattia lo portano a interrogarsi sul senso della propria vita.</p>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <h3>3. La conversione</h3>
+                        <p>Nella chiesetta di San Damiano ascolta, davanti al Crocifisso, l'invito a ricostruire la Chiesa. Rinuncia ai beni paterni davanti al vescovo e sceglie una vita di povertà.</p>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <h3>4. Nasce l'Ordine francescano</h3>
+                        <p>Attorno a lui si riuniscono i primi compagni. Nel 1209 papa Innocenzo III approva a voce la regola del nuovo movimento. Nel 1212 Chiara d'Assisi sceglie di seguirlo e darà vita alle Clarisse.</p>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <h3>5. Il presepe di Greccio</h3>
+                        <p>Nel Natale del 1223, a Greccio, Francesco rappresenta la nascita di Gesù con una mangiatoia, il bue e l'asino: è considerato il primo presepe.</p>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <h3>6. Le stimmate</h3>
+                        <p>Nel 1224, sul monte della Verna, riceve le stimmate. Nel 2024 si sono celebrati gli 800 anni di questo evento.</p>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <h3>7. Il Cantico delle creature</h3>
+                        <p>Negli ultimi anni, malato e quasi cieco, compone in volgare umbro il Cantico di frate Sole, una delle prime grandi opere della letteratura italiana.</p>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <h3>8. Il transito</h3>
+                        <p>Muore la sera del 3 ottobre 1226 alla Porziuncola, vicino ad Assisi. Il suo 'transito' viene ricordato ogni anno il 3 ottobre.</p>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <h3>9. Santo e patrono d'Italia</h3>
+                        <p>Viene canonizzato nel 1228 da papa Gregorio IX. Nel 1939 è proclamato patrono d'Italia insieme a santa Caterina da Siena. Dal 2005 il 4 ottobre è festa nazionale.</p>
+                    </div>
+                </div>
+
+                <div class="quote-box fade-in">
+                    "Laudato sì, mi' Signore, cum tucte le tue creature." (Cantico delle creature)
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Progetto scolastico – IISS Volta De Gemmis · Letteratura e Storia · Un omaggio alla prof.ssa Visaggio</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // MENU HAMBURGER (MOBILE)
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // DARK MODE TOGGLE
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
+        }
+
+        // ANIMAZIONI SCROLL (INTERSECTION OBSERVER)
+        function observeElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', observeElements);
+    </script>
+</body>
+</html>

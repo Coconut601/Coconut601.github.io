@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Francesco - Chi Sono</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA DI NAVIGAZIONE -->
+    <header>
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="storia.html" class="nav-link">LA STORIA</a></li>
+                <li><a href="tradizione.html" class="nav-link">LA TRADIZIONE</a></li>
+                <li><a href="galleria.html" class="nav-link">GALLERIA</a></li>
+                <li><a href="fonti.html" class="nav-link">FONTI</a></li>
+                <li><a href="chi-sono.html" class="nav-link active">CHI SONO</a></li>
+            </ul>
+
+            <div class="nav-utils">
+                <div class="lang-selector">
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="6.66" height="14" fill="#009246"/>
+                        <rect x="6.66" width="6.68" height="14" fill="#FFFFFF"/>
+                        <rect x="13.34" width="6.66" height="14" fill="#CE2B37"/>
+                    </svg>
+                    <span>IT</span>
+                    <span>▼</span>
+                </div>
+                <div class="separator"></div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGINA 6: CHI SONO -->
+        <section class="page-section active">
+            <div class="container">
+                <h2 class="fade-in" style="text-align: center; margin-bottom: 50px;">Chi sono?</h2>
+                
+                <div class="about-layout fade-in">
+                    <div class="about-image">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.3Xr9pgyyxMz6K4R5LNwq4QHaE4%3Fpid%3DApi&f=1&ipt=a5717111ef53b50e3e2821d43c82d8ac46946639990e7a18eb4f4a42ea19bd12&ipo=images" alt="Foto dello studente">
+                    </div>
+                    <div class="about-text">
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">Sono uno studente dell'IISS Volta De Gemmis e ho realizzato questo sito web per un progetto svolto con la professoressa Visaggio di Letteratura e Storia. Questo sito vuole essere un omaggio all'insegnamento della professoressa e anche alla festa e alle tradizioni legate a San Francesco.</p>
+                        
+                        <div class="thank-you-box">
+                            "Grazie alla professoressa Visaggio per averci insegnato a guardare alla storia e alla letteratura con curiosità e passione."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Progetto scolastico – IISS Volta De Gemmis · Letteratura e Storia · Un omaggio alla prof.ssa Visaggio</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // MENU HAMBURGER (MOBILE)
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // DARK MODE TOGGLE
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
+        }
+
+        // ANIMAZIONI SCROLL (INTERSECTION OBSERVER)
+        function observeElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', observeElements);
+    </script>
+</body>
+</html>

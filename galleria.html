@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Francesco - Galleria</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BARRA DI NAVIGAZIONE -->
+    <header>
+        <div class="nav-container">
+            <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="storia.html" class="nav-link">LA STORIA</a></li>
+                <li><a href="tradizione.html" class="nav-link">LA TRADIZIONE</a></li>
+                <li><a href="galleria.html" class="nav-link active">GALLERIA</a></li>
+                <li><a href="fonti.html" class="nav-link">FONTI</a></li>
+                <li><a href="chi-sono.html" class="nav-link">CHI SONO</a></li>
+            </ul>
+
+            <div class="nav-utils">
+                <div class="lang-selector">
+                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="6.66" height="14" fill="#009246"/>
+                        <rect x="6.66" width="6.68" height="14" fill="#FFFFFF"/>
+                        <rect x="13.34" width="6.66" height="14" fill="#CE2B37"/>
+                    </svg>
+                    <span>IT</span>
+                    <span>▼</span>
+                </div>
+                <div class="separator"></div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Cambia tema">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGINA 4: GALLERIA -->
+        <section class="page-section active">
+            <div class="container">
+                <h2 class="fade-in" style="text-align: center;">Galleria</h2>
+                <p class="fade-in" style="text-align: center; margin-bottom: 40px;">Luoghi e momenti della devozione francescana.</p>
+                
+                <div class="gallery-grid">
+                    <!-- 9 Foto segnaposto con didascalie -->
+                    <div class="gallery-item fade-in" onclick="openLightbox(this)">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.685vrHPZo9FpCGZC8rGtCQHaEk%3Fr%3D0%26pid%3DApi&f=1&ipt=970516cac2ec9d24ae8e4e205ce9469b2cce1e92a758ce4952fc1efd24ac0ee5&ipo=images" alt="La chiesa di San Francesco d'Assisi a Bitonto">
+                        <div class="gallery-caption">La chiesa di San Francesco d'Assisi a Bitonto</div>
+                    </div>
+                    <div class="gallery-item fade-in" onclick="openLightbox(this)">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.qHQaTZZhaihxHe9ipSeEcwHaFj%3Fpid%3DApi&f=1&ipt=4828675df846de0c326c132eaba48f074c80fdf809e78c26edb8ff5009f9b7a6&ipo=images" alt="La lampada della Pace">
+                        <div class="gallery-caption">La lampada della Pace</div>
+                    </div>
+                    <div class="gallery-item fade-in" onclick="openLightbox(this)">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.E6Sg4Kbmuahz0-t_hW8t6QHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=9ff5632a8bcf6b6147d563c018370f892f9b71dd044ea925f0a1a2d6248b3db0&ipo=images" alt="La Processione dei Misteri">
+                        <div class="gallery-caption">La Processione dei Misteri</div>
+                    </div>
+                    <div class="gallery-item fade-in" onclick="openLightbox(this)">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.3fXIj6QFiyMZ6JV0MdpxEwHaE8%3Fpid%3DApi&f=1&ipt=9778eeca09c03001583efc7c8a8425b0fbe279517fb5100bdffe83b14dd2e0a4&ipo=images" alt="Assisi">
+                        <div class="gallery-caption">Assisi</div>
+                    </div>
+                    <div class="gallery-item fade-in" onclick="openLightbox(this)">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.ZrTnVVH_G0c_aIYev-bO1gHaE8%3Fpid%3DApi&f=1&ipt=1af607da1ea00cbead7a9c84f636cc87781bbf8e5e29fc7b5549d97a02d9243c&ipo=images" alt="La Basilica di San Francesco">
+                        <div class="gallery-caption">La Basilica di San Francesco</div>
+                    </div>
+                    <div class="gallery-item fade-in" onclick="openLightbox(this)">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.oTl9B5mCbq7KU30_EkEIJAHaE9%3Fpid%3DApi&f=1&ipt=fa0fd08e7bf2278a1e30b665c904a50c70289a66f0a615d580a13aed4e95dea8&ipo=images" alt="Il presepe di Greccio">
+                        <div class="gallery-caption">Il presepe di Greccio</div>
+                    </div>
+                    <div class="gallery-item fade-in" onclick="openLightbox(this)">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.HUNLjbkMn4xeJEpKz1jhsgHaFj%3Fpid%3DApi&f=1&ipt=ceae8a9538eb80d4e65cda5129b4951f7b20c4c73e628062af0e7999c8016acf&ipo=images" alt="Il monte della Verna">
+                        <div class="gallery-caption">Il monte della Verna</div>
+                    </div>
+                    <div class="gallery-item fade-in" onclick="openLightbox(this)">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.N-qLCXZA4yk_k74EuOpSAQHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=22e21374b73e65f0f3ba5056bac5fc3c308568eac29bc76f16ce5c155e125cac&ipo=images" alt="Momenti della novena a Bitonto">
+                        <div class="gallery-caption">Momenti della novena a Bitonto</div>
+                    </div>
+                    <div class="gallery-item fade-in" onclick="openLightbox(this)">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.7344X6x7EJ-FsM1vg-YqKAHaLH%3Fr%3D0%26pid%3DApi&f=1&ipt=4297dce920f6b29e70ad764cb4db6295d0ed9ac4f0c13b524de00f3b8da1eaf7&ipo=images" alt="Statua del Santo">
+                        <div class="gallery-caption">Statua del Santo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <button class="lightbox-close">&times;</button>
+            <img id="lightbox-img" src="" alt="Immagine ingrandita">
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Progetto scolastico – IISS Volta De Gemmis · Letteratura e Storia · Un omaggio alla prof.ssa Visaggio</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // MENU HAMBURGER (MOBILE)
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // DARK MODE TOGGLE
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
+
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'light' ? '🌙' : '☀️';
+        }
+
+        // ANIMAZIONI SCROLL (INTERSECTION OBSERVER)
+        function observeElements() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', observeElements);
+
+        // LIGHTBOX GALLERIA
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
